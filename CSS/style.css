@@ -1,0 +1,97 @@
+/* {
+  box-sizing: border-box;
+  margin: 0;
+
+} */
+body{
+  background-color: brown;
+  margin: auto;
+  width: 90%;
+  background-image: url(../IMG/sfonlo-legno.jpg);
+  background-size: cover;
+  background-repeat:repeat-y;
+}
+
+/* header */
+
+.header-top{
+  /* background-color: red; */
+  height: 120px;
+  line-height: 120px;
+  border-bottom: 2px solid white;
+}
+.header-bottom{
+  /* background-color: blue; */
+  margin-top: 10px;
+}
+.logo-gmail{
+  height: 90px;
+  vertical-align: middle;
+  margin-left: 7px;
+}
+.logo-title{
+  display: inline;
+  color: white;
+}
+button{
+border-radius: 5px;
+}
+
+ /* main */
+
+.email-ricevute{
+  height: 70px;
+  font-size: 40px;
+  color: white;
+  margin-top: 20px;
+  border-bottom: 2px solid white;
+}
+.num-email{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 30px;
+  background-color: orange;
+  padding: 10px 10px;
+  border-radius: 30px;
+}
+.email{
+  border: 2px solid black;
+  background-color: lightgrey;
+}
+.oggetto-email{
+  font-size: 30px;
+}
+.testo-email{
+  /* display:inline; */
+  font-size: 30px;
+  color: grey;
+}
+.email-letta{
+  border: 2px solid black;
+  background-color: white;
+}
+.contenitore-email{
+  margin-top:8px;
+  border: 2px solid black;
+}
+
+/* footer */
+
+.sezione-finale{
+  height: 60px;
+  font-style: italic;
+  border-top: 2px solid white;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  line-height: 60px;
+}
+.sezione-finale .testo-powered{
+  font-size: 25px;
+}
+.list{
+  padding-left: 0;
+  /* margin-left: -40px; */
+  list-style: none;
+}

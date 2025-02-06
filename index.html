@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.google.com"  rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gmail</title>
+  </head>
+  <body>
+
+    <!-- intestazione pagina -->
+    <header>
+      <div class="header-top">
+         <img class="logo-gmail" src="IMG/logo-gmail.png" alt="logo gmail">
+         <h1 class="logo-title">Gmail</h1>
+      </div>
+      <div class="header-bottom">
+        <form class="form">
+            <input id="ricerca" type="text" name="" value="Search"required>
+            <button type="button" name="button">VAI</button>
+            <!-- <input id="ricerca" class="vai" type="submit" name="" value="VAI"> -->
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="email-ricevute">
+          <span>You have <span class="num-email">30</span> unread</span>
+        </div>
+      </section>
+      <!-- <section class="contenitore-email">
+        <div class="email">
+          <span class="oggetto-email"><strong>◻&#9733;Oggetto della email</strong></span><span class="testo-email"> - <strong>testo della email</strong></span>
+        </div>
+        <div class="email-letta">
+          <span class="oggetto-email"><strong>◻&#9733;Oggetto della email</strong></span><span class="testo-email"> - <strong>testo della email</strong></span>
+        </div>
+        <div class="email">
+          <span class="oggetto-email"><strong>◻&#9733;Oggetto della email</strong></span><span class="testo-email"> - <strong>testo della email</strong></span>
+        </div>
+        <div class="email">
+          <span class="oggetto-email"><strong>◻&#9733;Oggetto della email</strong></span><span class="testo-email"> - <strong>testo della email</strong></span>
+        </div> -->
+        <ul class="list" id="checkboxList">
+          <li class="email">
+
+            <input type="checkbox" name="" value="A">&starf;<strong>oggetto della e-mail </strong>testo della e-mail
+          </li>
+          <li class="email-letta">
+            <input type="checkbox" name="" value="B">&starf;<strong>oggetto della e-mail </strong>testo della e-mail
+          </li>
+          <li class="email-letta">
+            <input type="checkbox" name="" value="C">&starf;<strong>oggetto della e-mail </strong>testo della e-mail
+          </li>
+          <li class="email">
+            <input type="checkbox" name="" value="D">&starf;<strong>oggetto della e-mail </strong>testo della e-mail
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="sezione-finale">
+      <span><strong>GMail </strong></span>
+        <span class="testo-powered"><strong>powered by Jacopo </strong></span>
+    </footer>
+  </body>
+  <script type="text/javascript">
+  // Seleziona tutti i checkbox all'interno della lista
+      const checkboxes = document.querySelectorAll('#checkboxList input[type="checkbox"]');
+      const output = document.getElementById('selectedValues');
+
+      // Funzione per aggiornare i valori selezionati e stamparli in console
+      function updateSelectedValues() {
+          const selected = Array.from(checkboxes)
+              .filter(checkbox => checkbox.checked)  // Filtra solo quelli selezionati
+              .map(checkbox => checkbox.value); // Ottieni il valore
+
+          // Stampa il valore di ogni checkbox selezionato/deselezionato
+          checkboxes.forEach(checkbox => {
+              console.log( checkbox.checked);
+          });
+
+          output.textContent = selected.length ? selected.join(', ') : 'Nessuna selezione';
+      }
+
+      // Aggiunge un listener a ogni checkbox
+      checkboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', updateSelectedValues);
+      });
+
+  </script>
+</html>
